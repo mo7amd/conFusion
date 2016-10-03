@@ -60,17 +60,148 @@
                    <li><a href="contactus.html">
                      <i class="fa fa-envelope-o"></i>Contact</a></li>
                 </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="E-mail">
-                        <input type="text" class="form-control" placeholder="Password">
-                        <label class="checkbox-inline" style="color:white;"><input type="checkbox"> Remeber Me </label>
-                    </div>
-                    <button type="submit" class="btn btn-info">Sign in</button>
-                </form>
+									<ul class="nav navbar-nav navbar-right">
+                    <li><a id="login-Modal">
+                    <span class="glyphicon glyphicon-log-in" ></span> Login</a>
+                    </li>
+                </ul>
                </div>
            </div>
        </nav>
+	
+	<div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close " id="login-close">&times;</button>
+                <h4 class="modal-title">Login </h4>
+            </div>
+            <div class="modal-body">
+								<form class="form-inline ">
+									<div class="row row-header">
+                    <div class="form-group ">
+											<label class="sr-only" for="email">Email address</label>
+											<input type="email" class="form-control input-sm" placeholder="Email" id="email">
+											</div>
+										<div class="form-group ">
+                      <label class="sr-only" for="password">Password</label>
+											<input type="password" class="form-control input-sm" placeholder="Password" id="password">
+											</div>
+										<div class="checkbox ">
+                      <label>
+												<input type="checkbox"> Remeber Me </label>
+                    	</div>
+										
+                    <button type="submit" class="btn btn-info btn-xs ">Sign in</button>
+										<button type="button" class="btn btn-default btn-xs "	 id="login-cancle">Cancel</button>
+										
+										</div>
+							</form>
+            </div>
+        </div>
+      </div>
+    </div>
+	
+	<div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" id="reserve-close">&times;</button>
+                <h4 class="modal-title">Reserve Table </h4>
+            </div>
+					
+					
+            <div class="modal-body">
+								<div class="panel panel-primary">
+                    <div class="panel-body">    
+                        <dl class="dl-horizontal " >
+                            <form id="reserve">
+                              
+
+															<dt>Number</dt>
+																<dt>of</dt>
+                                <dt>Guests</dt>
+                                   
+																	<dd>
+																			
+                                        <div class="form-group">
+<!--                        <label>Number of Guests </label>-->
+                        <label class="radio-inline"><input type="radio">1</label>
+                        <label class="radio-inline"><input type="radio">2</label>
+                        <label class="radio-inline"><input type="radio">3</label>
+                        <label class="radio-inline"><input type="radio">4</label>
+                        <label class="radio-inline"><input type="radio">5</label>
+                        <label class="radio-inline"><input type="radio">6</label>
+                        </div>
+                    </dd>
+																
+								
+									<div class="form-group">
+										
+								<dt><p></p><label>Section</label></dt>
+										<dd>
+											<div class="btn-group" data-toggle="buttons">
+  											<label class="btn btn-success active">
+    											<input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+  												</label>
+  											<label class="btn btn-danger">
+													<input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+												</label>	
+											</div>
+											</dd>
+										</div>
+															
+                <div class="form-group form-inline">
+                   <dt>
+                       <p></p>
+                       <label>Date</label>
+                    </dt>
+									<dt>and</dt>
+									<dt>time</dt>
+                    <dd>
+											<div class="form-group form-inline">
+                        <label id="first">
+                        <div class="input-group date " >
+                    <input type="text" class="form-control" placeholder="date">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+													</label>
+											<label id="first">
+                        <label style="padding:0cm 1cm"></label>
+                    <div class="input-group time ">
+                    <input type="text" class="form-control" placeholder="time">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+										</label>
+												</div>
+                        </dd>
+                     </div>
+                </form>
+                <dd><a href="#"><button type="button" class="btn btn-primary btn-md">Reserve</button></a>
+													<button type="button" class="btn btn-default btn-md" id="reserve-cancle">Cancel</button>
+													</dd>
+                            </dl>
+                        </div>
+                    </div>
+                <div class="alert alert-warning alert-dismissible" role="alert"> 
+                    <button type="button" class="close"  data-dismiss="alert" aria-label="Close"> 
+                        <span aria-hidden="true">&times;</span> 
+                    </button> 
+                    <strong>Warning:</strong>: Please  
+                    <a	class="alert-link" data-toggle="tooltip" title="tel:+85212345678"
+                     data-placement="bottom"> call</a> us to reserve for more than six guests. 
+                </div> 
+            </div>
+        </div>
+      </div>
+    </div>
+	
     <header class="jumbotron">
         <!-- Main component for a primary marketing message or call to action -->
         <div class="container">
@@ -86,19 +217,89 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:50px;"></p>    
-                    <a href="index.html#reserve"><button type="button" class="btn btn-warning btn-block btn-md">Reserve Table</button></a>
+                    <a>
+											<button id="reserve-model" type="button" class="btn btn-warning btn-block btn-md">Reserve Table</button>
+									</a>
                 </div>
             </div>
         </div>
     </header>
 
     <div class="container">
-        <div class="row row-content">
-            <div class="col-xs-12 col-sm-3 col-sm-push-9">
+			<div class="row row-content" >
+           <div class="col-xs-12">
+						 	<div id="mycarousel" class="carousel slide" data-ride="carousel">
+								<!-- Indicators -->
+                <ol class="carousel-indicators" >
+                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mycarousel" data-slide-to="1"></li>
+                    <li data-target="#mycarousel" data-slide-to="2"></li>
+                </ol>
+
+								<!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="img-responsive"
+                         src="img/uthappizza.png" alt="Uthappizza" >
+                        <div class="carousel-caption">
+                        <h2>Uthappizza  <span class="label label-danger">Hot</span> <span class="badge">$4.99</span></h2>
+                        <p>A unique combination of Indian Uthappam (pancake) and
+                          Italian pizza, topped with Cerignola olives, ripe vine
+                          cherry tomatoes, Vidalia onion, Guntur chillies and
+                          Buffalo Paneer.</p>
+                        <p ><a class="btn btn-primary btn-xs" href="#Uthappizza">More &raquo;</a></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="media-object img-thumbnail"
+                         src="img/buffet.png" alt="buffet">
+                        <div class="carousel-caption">
+                        <h2>Weekend Grand Buffet <span class="label label-danger label-xs">New</span></h2>
+                         
+                       <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person</p>
+												<p><a class="btn btn-primary btn-xs" href="#Buffet">More &raquo;</a></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="media-object img-thumbnail"
+                         src="img/alberto.png" alt="Alberto Somayya">
+                        <div class="carousel-caption">
+                         <h2 class="media-heading">Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <p>Award winning three-star Michelin chef with wide
+                         International experience having worked closely with
+                         whos-who in the culinary world, he specializes in
+                          creating mouthwatering Indo-Italian fusion experiences.</p>
+													<p><a class="btn btn-primary btn-xs" href="#Somayya">More &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+								<!-- Controls -->
+                <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev" >
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only" >Previous</span>
+                </a>
+                <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next" id="Uthappizza">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+								<div class="btn-group" id="carouselButtons">
+                    <button class="btn btn-danger btn-xs" id="carousel-pause">
+                	    <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                    </button>
+                    <button class="btn btn-danger btn-xs" id="carousel-play">
+                	    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            </div>
+       </div>
+        <div class="row row-content" >
+            <div class="col-xs-12 col-sm-3 col-sm-push-9"  >
                 <p style="padding:20px;"></p>
                 <h3 align=center>Our Lipsmacking Culinary Creations</h3>
             </div>
-            <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+            <div class="col-xs-12 col-sm-9 col-sm-pull-3" >
                 <div class="media">
                     <div class="media-left media-middle">
                         <a href="#">
@@ -106,7 +307,7 @@
                          src="img/uthappizza.png" alt="Uthappizza">
                         </a>
                     </div>
-                    <div class="media-body">
+                    <div class="media-body" >
                         <h2 class="media-heading">Uthappizza
                             <span class="label label-danger">Hot</span>
                             <span class="badge">$4.99</span>
@@ -115,14 +316,14 @@
                           Italian pizza, topped with Cerignola olives, ripe vine
                           cherry tomatoes, Vidalia onion, Guntur chillies and
                           Buffalo Paneer.</p>
-                        <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                        <p id="Buffet"><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row row-content">
-            <div class="col-xs-12 col-sm-3">
+        <div class="row row-content" >
+            <div class="col-xs-12 col-sm-3" >
                 <p style="padding:20px;"></p>
                 <h3 align=center>This Month's Promotions</h3>
             </div>
@@ -134,7 +335,7 @@
                             <span class="label label-danger">New</span>
                        </h2>
                        <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-                        <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                        <p id="Somayya"><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                    </div>
                    <div class="media-right media-middle">
                        <a href="#">
@@ -147,7 +348,7 @@
             </div>
         </div>
 
-        <div class="row row-content">
+        <div class="row row-content" >
             <div class="col-xs-12 col-sm-3 col-sm-push-9">
                 <p style="padding:20px;"></p>
                 <h3 align=center>Meet our Culinary Specialists</h3>
@@ -171,65 +372,6 @@
                         <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row row-content">
-            <div class="col-xs-12 col-sm-3">
-                <p style="padding:20px;"></p>
-                <h3 align=center>Reserve a Table</h3>
-            </div>
-            <div class="col-xs-12 col-sm-9">
-                <div class="panel panel-primary">
-                    <div class="panel-body">    
-                        <dl class="dl-horizontal">
-                            <form id="reserve">
-                                <dt>Number of</dt>
-                                <dt>Guests</dt>
-                                    <dd>
-                                        <div class="form-group">
-<!--                        <label>Number of Guests </label>-->
-                        <label class="radio-inline"><input type="radio">1</label>
-                        <label class="radio-inline"><input type="radio">2</label>
-                        <label class="radio-inline"><input type="radio">3</label>
-                        <label class="radio-inline"><input type="radio">4</label>
-                        <label class="radio-inline"><input type="radio">5</label>
-                        <label class="radio-inline"><input type="radio">6</label>
-                        </div>
-                    </dd>
-                <div class="form-group form-inline">
-                   <dt>
-                       <p></p>
-                       <label>Date and time</label>
-                    </dt>
-                    <dd>
-                        
-                        <div class="input-group date" >
-                    <input type="text" class="form-control" placeholder="date">
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                        <label style="padding:0cm 1cm"></label>
-                    <div class="input-group time">
-                    <input type="text" class="form-control" placeholder="time">
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-time"></span>
-                                </span>
-                            </div>
-                        </dd>
-                     </div>
-                </form>
-                <dd><a href="#"><button type="button" class="btn btn-primary btn-md">Reserve</button></a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                <div class="alert alert-warning alert-dismissible" role="alert"> 
-                    <button type="button" class="close"  data-dismiss="alert" aria-label="Close"> 
-                        <span aria-hidden="true">&times;</span> 
-                    </button> 
-                    <strong>Warning:</strong>: Please  
-                    <a href ="tel:+85212345678" class="alert-link"> call</a> us to reserve for more than six guests. 
-                </div> 
             </div>
         </div>
     </div>
@@ -268,7 +410,7 @@
                       <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
                   </div>
                 </div>
-                <div class="col-xs-12 >
+                <div class="col-xs-12 ">
                     <p style="padding:10px;"></p>
                     <p align=center>© Copyright 2015 Ristorante Con Fusion</p>
                 </div>
@@ -279,5 +421,51 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="js/bootstrap.min.js"></script>
+ <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+         });
+    </script>
+																 
+			<script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 1500 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            			});
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            			});
+        		});
+    </script>
+<!--	assignment 4 script-->
+		<script>
+		$(document).ready(function(){
+			$("#login-Modal").click(function(){
+				$("#loginModal").modal('show');
+			});
+			
+			$("#login-cancle").click(function(){
+				$("#loginModal").modal('hide');
+			});
+			
+			$("#login-close").click(function(){
+				$("#loginModal").modal('hide');
+			});
+			
+			$("#reserve-model").click(function(){
+				$("#reserveModal").modal('show');
+			});
+			
+			$("#reserve-cancle").click(function(){
+				$("#reserveModal").modal('hide');
+			});
+			
+			$("#reserve-close").click(function(){
+				$("#reserveModal").modal('hide');
+			});
+		});
+	</script>
+<!--******************************************************************************************************-->
 </body>
 </html>
